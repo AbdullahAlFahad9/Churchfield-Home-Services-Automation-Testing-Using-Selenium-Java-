@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-04-04T00:25:25 BDT" name="Surefire suite" finished-at="2026-04-04T00:25:36 BDT" duration-ms="10577">
+    <groups>
+    </groups>
+    <test started-at="2026-04-04T00:25:25 BDT" name="Surefire test" finished-at="2026-04-04T00:25:36 BDT" duration-ms="10577">
+      <class name="selenium_fahad.FahadTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:selenium_fahad.FahadTest@65d6b83b]" started-at="2026-04-04T00:25:25 BDT" name="setUp" finished-at="2026-04-04T00:25:30 BDT" duration-ms="4333" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="registerTest()[pri:0, instance:selenium_fahad.FahadTest@65d6b83b]" started-at="2026-04-04T00:25:30 BDT" name="registerTest" finished-at="2026-04-04T00:25:35 BDT" duration-ms="5693" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:selenium_fahad.FahadTest@65d6b83b]" started-at="2026-04-04T00:25:35 BDT" name="tearDown" finished-at="2026-04-04T00:25:36 BDT" duration-ms="482" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- selenium_fahad.FahadTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
