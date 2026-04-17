@@ -1,64 +1,83 @@
 package pages;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
 import java.io.File;
+import java.time.Duration;
 
 public class AssessmentPage {
 
     WebDriver driver;
+    WebDriverWait wait;
 
     public AssessmentPage(WebDriver driver) {
         this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    // ✅ Stable locators (NOT deep XPath)
-    By semiDetached = By
-            .xpath("//*[@id=\"tab-header\"]/div[2]/div/div/form/div[1]/div[7]/label/span");
-    By twoStoreys = By.xpath("/html/body/div[1]/div[5]/div[2]/div/div/form/div[3]/div[1]/div[1]/div/div[2]/label/span");
-    By existingYes = By
-            .xpath("//*[@id=\"tab-header\"]/div[2]/div/div/form/div[3]/div[1]/div[2]/div[1]/div[1]/label/span");
-    By addExtNo = By
-            .xpath("(//*[@id=\"tab-header\"]/div[2]/div/div/form/div[3]/div[1]/div[3]/div[1]/div[2]/label/span");
-
-    By photoCheckbox = By.xpath("/html/body/div[1]/div[5]/div[2]/div/div/form/div[3]/div[2]/div/div[3]/label/span");
-    By upload = By.xpath("//input[@type='file']");
-    By nextBtn = By.xpath("//button[text()='Next']");
+    // ✅ Stable locators
+    By semiDetached = By.xpath("//label[@for='houseType_5']");
+    By twoStoreys = By.xpath("//input[@name='noOfStoreys' and @value='2']/parent::label");
+    By existingYes = By.xpath("//input[@name='hasExistingExtension' and @value='true']/parent::label");
+    By addExtNo = By.xpath("//input[@name='hasExtension' and @value='false']/parent::label");
+    By photoCheckbox = By.xpath("//input[@name='noPhotoChecked']");
+    By upload = By.id("image-upload");
+    By nextBtn = By.id("chs_home_next");
     By assertText = By.xpath("//*[contains(text(),'warm, comfortable, and healthy home')]");
 
-    // 🔥 Scroll + Click method
-    public void scrollAndClick(By locator) {
-        WebElement element = driver.findElement(locator);
+    // 🔥 Smart Click (handles scroll + overlay + wait)
+    public void smartClick(By locator) {
+
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 
         ((JavascriptExecutor) driver)
-                .executeScript("arguments[0].scrollIntoView({block: 'center'});", element);
+                .executeScript("arguments[0].scrollIntoView({block:'center'});", element);
 
-        element.click();
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
+        } catch (Exception e) {
+            // fallback → JS click
+            ((JavascriptExecutor) driver)
+                    .executeScript("arguments[0].click();", element);
+        }
     }
 
     // 🔥 Fill Step 1
     public void fillStepOne() {
 
-        scrollAndClick(semiDetached);
-        scrollAndClick(twoStoreys);
-        scrollAndClick(existingYes);
-        scrollAndClick(addExtNo);
+        smartClick(semiDetached);
+        smartClick(twoStoreys);
+        smartClick(existingYes);
+        smartClick(addExtNo);
 
-        // Checkbox logic (correct)
-        WebElement checkbox = driver.findElement(photoCheckbox);
+        // Checkbox uncheck
+        WebElement checkbox = wait.until(ExpectedConditions.presenceOfElementLocated(photoCheckbox));
+
         if (checkbox.isSelected()) {
-            checkbox.click();
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", checkbox);
         }
 
-        // File upload (must use real path)
+        // wait until enabled
+        WebElement uploadInput = wait.until(driver -> {
+            WebElement el = driver.findElement(upload);
+            return el.isEnabled() ? el : null;
+        });
+
+        // remove hidden/disabled
+        ((JavascriptExecutor) driver).executeScript(
+                "arguments[0].removeAttribute('disabled'); arguments[0].style.display='block';",
+                uploadInput);
+
+        // upload
         File file = new File("C:\\Users\\user\\Downloads\\test.jpg");
-        driver.findElement(upload).sendKeys(file.getAbsolutePath());
+        uploadInput.sendKeys(file.getAbsolutePath());
     }
 
     public void clickNext() {
-        scrollAndClick(nextBtn);
+        smartClick(nextBtn);
     }
 
     public boolean verifyText() {
-        return driver.findElement(assertText).isDisplayed();
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(assertText)).isDisplayed();
     }
 }

@@ -10,7 +10,7 @@ public class HomePage {
         this.driver = driver;
     }
 
-    By ourServices = By.xpath("//a[contains(text(),'Our Services')]");
+    By ourServices = By.xpath("//a[text()='Our Services']");
 
     public void clickOurServices() {
         driver.findElement(ourServices).click();

@@ -11,7 +11,7 @@ public class ServicePage {
     }
 
     By homeEnergy = By.xpath("//*[@id=\"__next\"]/header/div[2]/div[2]/div/div/div[2]/div/div/a[2]/div[1]/img");
-    By bookNow = By.xpath("//a[contains(text(),'Book your Home Energy Assessment')]");
+    By bookNow = By.linkText("Book your Home Energy Assessment");
 
     public void openFlow() {
         driver.findElement(homeEnergy).click();
