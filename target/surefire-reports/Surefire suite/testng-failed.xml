@@ -3,13 +3,11 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="selenium_fahad.FahadTest">
+      <class name="tests.HomeEnergyTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="registerTest"/>
+          <include name="fullFlowTest"/>
         </methods>
-      </class> <!-- selenium_fahad.FahadTest -->
+      </class> <!-- tests.HomeEnergyTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

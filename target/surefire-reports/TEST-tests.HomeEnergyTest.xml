@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="tests.HomeEnergyTest" time="70.047" tests="1" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\user\Downloads\Churchfield Home Services Selenium Project\target\test-classes;C:\Users\user\Downloads\Churchfield Home Services Selenium Project\target\classes;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-java\4.43.0\selenium-java-4.43.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-api\4.43.0\selenium-api-4.43.0.jar;C:\Users\user\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.43.0\selenium-chrome-driver-4.43.0.jar;C:\Users\user\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.43.0\selenium-chromium-driver-4.43.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-json\4.43.0\selenium-json-4.43.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.43.0\selenium-manager-4.43.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v145\4.43.0\selenium-devtools-v145-4.43.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v146\4.43.0\selenium-devtools-v146-4.43.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v147\4.43.0\selenium-devtools-v147-4.43.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.43.0\selenium-edge-driver-4.43.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.43.0\selenium-firefox-driver-4.43.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-http\4.43.0\selenium-http-4.43.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.43.0\selenium-ie-driver-4.43.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.43.0\selenium-remote-driver-4.43.0.jar;C:\Users\user\.m2\repository\com\google\guava\guava\33.5.0-jre\guava-33.5.0-jre.jar;C:\Users\user\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\Users\user\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\user\.m2\repository\com\google\errorprone\error_prone_annotations\2.41.0\error_prone_annotations-2.41.0.jar;C:\Users\user\.m2\repository\com\google\j2objc\j2objc-annotations\3.1\j2objc-annotations-3.1.jar;C:\Users\user\.m2\repository\io\opentelemetry\opentelemetry-api\1.60.1\opentelemetry-api-1.60.1.jar;C:\Users\user\.m2\repository\io\opentelemetry\opentelemetry-context\1.60.1\opentelemetry-context-1.60.1.jar;C:\Users\user\.m2\repository\io\opentelemetry\opentelemetry-common\1.60.1\opentelemetry-common-1.60.1.jar;C:\Users\user\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.60.1\opentelemetry-exporter-logging-1.60.1.jar;C:\Users\user\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.60.1\opentelemetry-sdk-common-1.60.1.jar;C:\Users\user\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.60.1\opentelemetry-sdk-extension-autoconfigure-spi-1.60.1.jar;C:\Users\user\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.60.1\opentelemetry-sdk-extension-autoconfigure-1.60.1.jar;C:\Users\user\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.60.1\opentelemetry-sdk-trace-1.60.1.jar;C:\Users\user\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.60.1\opentelemetry-sdk-1.60.1.jar;C:\Users\user\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.60.1\opentelemetry-sdk-metrics-1.60.1.jar;C:\Users\user\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.60.1\opentelemetry-sdk-logs-1.60.1.jar;C:\Users\user\.m2\repository\net\bytebuddy\byte-buddy\1.18.8-jdk5\byte-buddy-1.18.8-jdk5.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-os\4.43.0\selenium-os-4.43.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.43.0\selenium-safari-driver-4.43.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-support\4.43.0\selenium-support-4.43.0.jar;C:\Users\user\.m2\repository\org\testng\testng\7.10.2\testng-7.10.2.jar;C:\Users\user\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\user\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\user\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Dhaka"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
+    <property name="sun.java.command" value="C:\Users\user\AppData\Local\Temp\surefire16754445847174209128\surefirebooter-20260428021603785_3.jar C:\Users\user\AppData\Local\Temp\surefire16754445847174209128 2026-04-28T02-16-03_435-jvmRun1 surefire-20260428021603785_1tmp surefire_0-20260428021603785_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\user\Downloads\Churchfield Home Services Selenium Project\target\test-classes;C:\Users\user\Downloads\Churchfield Home Services Selenium Project\target\classes;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-java\4.43.0\selenium-java-4.43.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-api\4.43.0\selenium-api-4.43.0.jar;C:\Users\user\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.43.0\selenium-chrome-driver-4.43.0.jar;C:\Users\user\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.43.0\selenium-chromium-driver-4.43.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-json\4.43.0\selenium-json-4.43.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.43.0\selenium-manager-4.43.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v145\4.43.0\selenium-devtools-v145-4.43.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v146\4.43.0\selenium-devtools-v146-4.43.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v147\4.43.0\selenium-devtools-v147-4.43.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.43.0\selenium-edge-driver-4.43.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.43.0\selenium-firefox-driver-4.43.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-http\4.43.0\selenium-http-4.43.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.43.0\selenium-ie-driver-4.43.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.43.0\selenium-remote-driver-4.43.0.jar;C:\Users\user\.m2\repository\com\google\guava\guava\33.5.0-jre\guava-33.5.0-jre.jar;C:\Users\user\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\Users\user\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\user\.m2\repository\com\google\errorprone\error_prone_annotations\2.41.0\error_prone_annotations-2.41.0.jar;C:\Users\user\.m2\repository\com\google\j2objc\j2objc-annotations\3.1\j2objc-annotations-3.1.jar;C:\Users\user\.m2\repository\io\opentelemetry\opentelemetry-api\1.60.1\opentelemetry-api-1.60.1.jar;C:\Users\user\.m2\repository\io\opentelemetry\opentelemetry-context\1.60.1\opentelemetry-context-1.60.1.jar;C:\Users\user\.m2\repository\io\opentelemetry\opentelemetry-common\1.60.1\opentelemetry-common-1.60.1.jar;C:\Users\user\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.60.1\opentelemetry-exporter-logging-1.60.1.jar;C:\Users\user\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.60.1\opentelemetry-sdk-common-1.60.1.jar;C:\Users\user\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.60.1\opentelemetry-sdk-extension-autoconfigure-spi-1.60.1.jar;C:\Users\user\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.60.1\opentelemetry-sdk-extension-autoconfigure-1.60.1.jar;C:\Users\user\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.60.1\opentelemetry-sdk-trace-1.60.1.jar;C:\Users\user\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.60.1\opentelemetry-sdk-1.60.1.jar;C:\Users\user\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.60.1\opentelemetry-sdk-metrics-1.60.1.jar;C:\Users\user\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.60.1\opentelemetry-sdk-logs-1.60.1.jar;C:\Users\user\.m2\repository\net\bytebuddy\byte-buddy\1.18.8-jdk5\byte-buddy-1.18.8-jdk5.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-os\4.43.0\selenium-os-4.43.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.43.0\selenium-safari-driver-4.43.0.jar;C:\Users\user\.m2\repository\org\seleniumhq\selenium\selenium-support\4.43.0\selenium-support-4.43.0.jar;C:\Users\user\.m2\repository\org\testng\testng\7.10.2\testng-7.10.2.jar;C:\Users\user\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\user\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\user\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\user"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-10-15"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-21"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\user\Downloads\Churchfield Home Services Selenium Project"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\user\AppData\Local\Temp\surefire16754445847174209128\surefirebooter-20260428021603785_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.5+9-LTS-239"/>
+    <property name="user.name" value="user"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\user\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\user\AppData\Local\Temp\"/>
+    <property name="java.version" value="21.0.5"/>
+    <property name="user.dir" value="C:\Users\user\Downloads\Churchfield Home Services Selenium Project"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;c:\Users\user\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\user\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Java\jdk-19\bin;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Java\jdk-21\bin;C:\Users\user\AppData\Local\Microsoft\WindowsApps;C:\Users\user\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\user\AppData\Roaming\Composer\vendor\bin;C:\xampp\htdocs\composer;C:\xampp\php\php.exe;C:\ProgramData\ComposerSetup\bin;C:\Program Files\7-Zip;C:\Users\user\AppData\Roaming\npm;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Node.js;C:\Users\user\AppData\Local\GitHubDesktop\bin;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Android Studio;C:\Program Files\Java\jdk-21\bin;C:\Users\user\Downloads\apache-maven-3.9.14\bin;c:\Users\user\.vscode\extensions\vscjava.vscode-java-debug-0.59.0\bundled\scripts\noConfigScripts;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="21.0.5+9-LTS-239"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="fullFlowTest" classname="tests.HomeEnergyTest" time="68.993">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(@aria-label,&apos;Next month&apos;)]&quot;}&#10;  (Session info: chrome=147.0.7727.102)&#10;For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception&#10;Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;&#10;System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [5bbbe929f3e552a5606f59d446aa6ccd, findElement {using=xpath, value=//button[contains(@aria-label,&apos;Next month&apos;)]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.102, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Program Files\scoped_dir...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52008}, goog:processID: 13396, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52008/devtoo..., se:cdpVersion: 147.0.7727.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 5bbbe929f3e552a5606f59d446aa6ccd" type="org.openqa.selenium.NoSuchElementException"><![CDATA[org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(@aria-label,'Next month')]"}
+  (Session info: chrome=147.0.7727.102)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5bbbe929f3e552a5606f59d446aa6ccd, findElement {using=xpath, value=//button[contains(@aria-label,'Next month')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.102, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Program Files\scoped_dir...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52008}, goog:processID: 13396, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52008/devtoo..., se:cdpVersion: 147.0.7727.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5bbbe929f3e552a5606f59d446aa6ccd
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:429)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:423)
+	at pages.BookingPage.selectDate(BookingPage.java:129)
+	at tests.HomeEnergyTest.fullFlowTest(HomeEnergyTest.java:44)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[No popup found
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+  </testcase>
+</testsuite>

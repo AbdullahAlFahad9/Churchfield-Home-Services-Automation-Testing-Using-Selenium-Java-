@@ -72,5 +72,5 @@ mvn clean test
 ---
 
 ## 👨‍💻 Author
-Abdullah Al Ahad  
+Abdullah Al Fahad  
 Junior SQA Engineer

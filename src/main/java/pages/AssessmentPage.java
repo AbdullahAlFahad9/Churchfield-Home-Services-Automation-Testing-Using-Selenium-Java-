@@ -15,17 +15,18 @@ public class AssessmentPage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    // ✅ Stable locators
+    //  Stable locators
     By semiDetached = By.xpath("//label[@for='houseType_5']");
     By twoStoreys = By.xpath("//input[@name='noOfStoreys' and @value='2']/parent::label");
     By existingYes = By.xpath("//input[@name='hasExistingExtension' and @value='true']/parent::label");
     By addExtNo = By.xpath("//input[@name='hasExtension' and @value='false']/parent::label");
     By photoCheckbox = By.xpath("//input[@name='noPhotoChecked']");
     By upload = By.id("image-upload");
-    By nextBtn = By.id("chs_home_next");
+    By nextBtn = By.xpath("//button[text()='Next']");
     By assertText = By.xpath("//*[contains(text(),'warm, comfortable, and healthy home')]");
+    // By nextBtn2 = By.xpath("//*[@id=\"chs_question_next\"]");
 
-    // 🔥 Smart Click (handles scroll + overlay + wait)
+    //  Smart Click (handles scroll + overlay + wait)
     public void smartClick(By locator) {
 
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
@@ -42,7 +43,7 @@ public class AssessmentPage {
         }
     }
 
-    // 🔥 Fill Step 1
+    //  Fill Step 1
     public void fillStepOne() {
 
         smartClick(semiDetached);
@@ -71,6 +72,9 @@ public class AssessmentPage {
         // upload
         File file = new File("C:\\Users\\user\\Downloads\\test.jpg");
         uploadInput.sendKeys(file.getAbsolutePath());
+
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(
+                By.cssSelector(".loading,.spinner")));
     }
 
     public void clickNext() {
@@ -80,4 +84,5 @@ public class AssessmentPage {
     public boolean verifyText() {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(assertText)).isDisplayed();
     }
+
 }

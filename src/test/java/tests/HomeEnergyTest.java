@@ -32,11 +32,11 @@ public class HomeEnergyTest extends BaseTest {
         Assert.assertTrue(assess.verifyText());
 
         // Step 4
-        popup.closePopup();
         assess.clickNext();
 
         // Step 5
-        booking.fillForm("Abdullah", "Al Ahad", "test@mail.com", "01700000000");
+        popup.closePopupIfPresent();
+        booking.fillForm("Abdullah", "Al Fahad", "test@mail.com", "01700000000");
         booking.selectAddress();
         booking.clickNext();
 
@@ -45,7 +45,7 @@ public class HomeEnergyTest extends BaseTest {
         booking.selectTimeSlot();
 
         // Step 7
-        popup.closePopup();
+        // popup.closePopupIfPresent();
 
         // Step 8
         Assert.assertTrue(popup.verifyEmail("test@mail.com"));
