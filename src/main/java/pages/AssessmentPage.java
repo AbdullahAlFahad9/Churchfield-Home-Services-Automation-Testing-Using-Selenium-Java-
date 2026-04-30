@@ -15,7 +15,7 @@ public class AssessmentPage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    //  Stable locators
+    // Stable locators
     By semiDetached = By.xpath("//label[@for='houseType_5']");
     By twoStoreys = By.xpath("//input[@name='noOfStoreys' and @value='2']/parent::label");
     By existingYes = By.xpath("//input[@name='hasExistingExtension' and @value='true']/parent::label");
@@ -24,9 +24,8 @@ public class AssessmentPage {
     By upload = By.id("image-upload");
     By nextBtn = By.xpath("//button[text()='Next']");
     By assertText = By.xpath("//*[contains(text(),'warm, comfortable, and healthy home')]");
-    // By nextBtn2 = By.xpath("//*[@id=\"chs_question_next\"]");
 
-    //  Smart Click (handles scroll + overlay + wait)
+    // Smart Click (handles scroll + overlay + wait)
     public void smartClick(By locator) {
 
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
@@ -43,7 +42,7 @@ public class AssessmentPage {
         }
     }
 
-    //  Fill Step 1
+    // Fill Step 1
     public void fillStepOne() {
 
         smartClick(semiDetached);

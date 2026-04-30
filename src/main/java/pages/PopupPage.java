@@ -15,10 +15,10 @@ public class PopupPage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    // ✅ popup container (open state)
+    // popup container (open state)
     By popup = By.xpath("//div[contains(@class,'app-modal') and contains(@class,'open')]");
 
-    // ✅ correct close button
+    // correct close button
     By closeBtn = By.xpath(
             "//div[contains(@class,'app-modal') and contains(@class,'open')]//button[contains(@class,'app-modal-close')]");
 
@@ -28,20 +28,20 @@ public class PopupPage {
     public void closePopupIfPresent() {
 
         try {
-            // popup visible হলে
+            // popup visible
             wait.until(ExpectedConditions.visibilityOfElementLocated(popup));
 
-            // 🔥 first try "Later" button
+            // first try "Later" button
             try {
                 driver.findElement(laterBtn).click();
             } catch (Exception ignored) {
             }
 
-            // 🔥 then close icon
+            // then close icon
             WebElement close = wait.until(ExpectedConditions.elementToBeClickable(closeBtn));
             close.click();
 
-            // 🔥 wait until popup gone
+            // wait until popup gone
             wait.until(ExpectedConditions.invisibilityOfElementLocated(popup));
 
         } catch (Exception e) {
