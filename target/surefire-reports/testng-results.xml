@@ -2,34 +2,34 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-28T02:16:05 BDT" name="Surefire suite" finished-at="2026-04-28T02:17:14 BDT" duration-ms="69065">
+  <suite started-at="2026-05-24T02:02:41 BDT" name="Surefire suite" finished-at="2026-05-24T02:03:16 BDT" duration-ms="35318">
     <groups>
     </groups>
-    <test started-at="2026-04-28T02:16:05 BDT" name="Surefire test" finished-at="2026-04-28T02:17:14 BDT" duration-ms="69065">
+    <test started-at="2026-05-24T02:02:41 BDT" name="Surefire test" finished-at="2026-05-24T02:03:16 BDT" duration-ms="35318">
       <class name="tests.HomeEnergyTest">
-        <test-method signature="fullFlowTest()[pri:0, instance:tests.HomeEnergyTest@358ee631]" started-at="2026-04-28T02:16:05 BDT" name="fullFlowTest" finished-at="2026-04-28T02:17:14 BDT" duration-ms="68981" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="fullFlowTest()[pri:0, instance:tests.HomeEnergyTest@358ee631]" started-at="2026-05-24T02:02:41 BDT" name="fullFlowTest" finished-at="2026-05-24T02:03:16 BDT" duration-ms="35055" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(@aria-label,'Next month')]"}
-  (Session info: chrome=147.0.7727.102)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+              <![CDATA[stale element reference: stale element not found in the current frame
+  (Session info: chrome=148.0.7778.179)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
 Build info: version: '4.43.0', revision: 'dd0f534'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5bbbe929f3e552a5606f59d446aa6ccd, findElement {using=xpath, value=//button[contains(@aria-label,'Next month')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.102, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Program Files\scoped_dir...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52008}, goog:processID: 13396, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52008/devtoo..., se:cdpVersion: 147.0.7727.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5bbbe929f3e552a5606f59d446aa6ccd]]>
+Command: [302fe70f167910de66e3e2f069ce0c89, executeScript {script=arguments[0].scrollIntoView({block:'center'});, args=[{element-6066-11e4-a52e-4f735466cecf=f.81C7014C94AD5D746EB06EF2C180B1B2.d.EB79ABC17B4DB4B7C92F31A04D06D32F.e.1498}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Program Files\scoped_dir...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54166}, goog:processID: 15328, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54166/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 302fe70f167910de66e3e2f069ce0c89]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(@aria-label,'Next month')]"}
-  (Session info: chrome=147.0.7727.102)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=148.0.7778.179)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
 Build info: version: '4.43.0', revision: 'dd0f534'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5bbbe929f3e552a5606f59d446aa6ccd, findElement {using=xpath, value=//button[contains(@aria-label,'Next month')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.102, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Program Files\scoped_dir...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52008}, goog:processID: 13396, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52008/devtoo..., se:cdpVersion: 147.0.7727.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5bbbe929f3e552a5606f59d446aa6ccd
+Command: [302fe70f167910de66e3e2f069ce0c89, executeScript {script=arguments[0].scrollIntoView({block:'center'});, args=[{element-6066-11e4-a52e-4f735466cecf=f.81C7014C94AD5D746EB06EF2C180B1B2.d.EB79ABC17B4DB4B7C92F31A04D06D32F.e.1498}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Program Files\scoped_dir...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54166}, goog:processID: 15328, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54166/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 302fe70f167910de66e3e2f069ce0c89
 at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
 at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
 at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -37,12 +37,10 @@ at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.ja
 at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:429)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:423)
-at pages.BookingPage.selectDate(BookingPage.java:129)
-at tests.HomeEnergyTest.fullFlowTest(HomeEnergyTest.java:44)
+at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:537)
+at pages.AssessmentPage.smartClick(AssessmentPage.java:34)
+at pages.AssessmentPage.fillStepOne(AssessmentPage.java:48)
+at tests.HomeEnergyTest.fullFlowTest(HomeEnergyTest.java:30)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -76,7 +74,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fullFlowTest -->

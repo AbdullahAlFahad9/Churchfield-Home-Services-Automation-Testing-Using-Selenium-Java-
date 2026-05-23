@@ -23,7 +23,10 @@ public class PopupPage {
             "//div[contains(@class,'app-modal') and contains(@class,'open')]//button[contains(@class,'app-modal-close')]");
 
     By laterBtn = By.xpath("//button[contains(text(),'Later')]");
-    By emailText = By.xpath("//*[contains(text(),'@')]");
+
+    By modal = By.cssSelector(".app-modal-body");
+    By emailText = By.xpath("//p[contains(text(),'quote to:')]//strong");
+    By closeBtn1 = By.cssSelector(".app-modal-close");
 
     public void closePopupIfPresent() {
 
@@ -49,8 +52,28 @@ public class PopupPage {
         }
     }
 
-    public boolean verifyEmail(String email) {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(emailText))
-                .getText().contains(email);
+    public String getEmailFromPopup() {
+
+        WebElement modalElement = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(modal));
+
+        WebElement email = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(emailText));
+
+        return email.getText().trim();
     }
+
+    public void closePopup() {
+
+        try {
+            WebElement btn = wait.until(
+                    ExpectedConditions.elementToBeClickable(closeBtn1));
+            btn.click();
+        } catch (Exception e) {
+            ((JavascriptExecutor) driver).executeScript(
+                    "arguments[0].click();",
+                    driver.findElement(closeBtn1));
+        }
+    }
+
 }

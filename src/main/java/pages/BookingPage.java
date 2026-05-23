@@ -40,7 +40,7 @@ public class BookingPage {
                 .executeScript("arguments[0].scrollIntoView({block:'center'});", element);
 
         try {
-            element.click(); //  important (focus)
+            element.click(); // important (focus)
             element.clear();
             element.sendKeys(text);
         } catch (Exception e) {
@@ -51,7 +51,7 @@ public class BookingPage {
 
     public void fillForm(String fn, String ln, String em, String mob) {
 
-        //  scroll hole page down
+        // scroll hole page down
         ((JavascriptExecutor) driver)
                 .executeScript("window.scrollBy(0,500);");
 
@@ -67,14 +67,14 @@ public class BookingPage {
 
         By dropdownItem = By.xpath("//li//span[contains(text(),'Dublin')]");
 
-        //  wait until visible
+        // wait until visible
         WebElement item = wait.until(
                 ExpectedConditions.visibilityOfElementLocated(dropdownItem));
 
-        //  small wait (animation finish)
+        // small wait (animation finish)
         wait.until(ExpectedConditions.elementToBeClickable(item));
 
-        //  scroll to element
+        // scroll to element
         ((JavascriptExecutor) driver)
                 .executeScript("arguments[0].scrollIntoView({block:'center'});", item);
 
@@ -82,7 +82,7 @@ public class BookingPage {
             item.click();
         } catch (Exception e) {
 
-            //  fallback 1 → JS click
+            // fallback 1 → JS click
 
             ((JavascriptExecutor) driver)
                     .executeScript("arguments[0].click();", item);
@@ -106,10 +106,19 @@ public class BookingPage {
     }
 
     public void clickNext() {
+
+        // wait until address full fill
+        wait.until(ExpectedConditions.attributeToBeNotEmpty(
+                driver.findElement(address), "value"));
+
+        // optional: small stability wait
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(
+                By.cssSelector(".loading, .spinner")));
+
         smartClick(nextBtn);
     }
 
-    //  DATE LOGIC (IMPORTANT INTERVIEW PART)
+    // DATE LOGIC (IMPORTANT INTERVIEW PART)
     public void selectDate() {
 
         List<org.openqa.selenium.WebElement> dates = driver.findElements(By.cssSelector(".available-date"));

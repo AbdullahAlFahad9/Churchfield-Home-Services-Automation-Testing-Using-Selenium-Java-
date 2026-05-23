@@ -16,6 +16,7 @@ public class HomeEnergyTest extends BaseTest {
         ServicePage service = new ServicePage(driver);
         AssessmentPage assess = new AssessmentPage(driver);
         BookingPage booking = new BookingPage(driver);
+        SchedulePage schedule = new SchedulePage(driver);
         PopupPage popup = new PopupPage(driver);
 
         // Step 1
@@ -35,21 +36,26 @@ public class HomeEnergyTest extends BaseTest {
         assess.clickNext();
 
         // Step 5
-        popup.closePopupIfPresent();
+        // popup.closePopupIfPresent();
         booking.fillForm("Abdullah", "Al Fahad", "test@mail.com", "01700000000");
         booking.selectAddress();
         booking.clickNext();
 
         // Step 6 (Date & Time logic)
-        booking.selectDate();
-        booking.selectTimeSlot();
-
+        schedule.selectAvailableDate();
+        schedule.selectTimeSlot();
+        schedule.clickNext();
+        schedule.clickLater();
         // Step 7
         // popup.closePopupIfPresent();
 
         // Step 8
-        Assert.assertTrue(popup.verifyEmail("test@mail.com"));
 
+        String actualEmail = popup.getEmailFromPopup();
+
+        Assert.assertTrue(actualEmail.contains("test@mail.com"));
+
+        popup.closePopup();
         tearDown();
     }
 }
