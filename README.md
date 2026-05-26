@@ -1,76 +1,198 @@
-# 🧪 Churchfield Home Services Automation (Selenium Java - POM)
+# 🧪 Churchfield Home Services Automation Testing (Selenium Java - POM)
 
 ## 📌 Project Overview
-This project automates the Home Energy Assessment booking flow using Selenium WebDriver with Java. The framework follows the Page Object Model (POM) design pattern for better maintainability and reusability.
+
+This project automates the complete **Home Energy Assessment Booking Flow** for Churchfield Home Services using **Selenium WebDriver with Java**.
+
+The framework is built using the **Page Object Model (POM)** design pattern to ensure scalability, maintainability, and reusable test components.
+
+The automation covers the full end-to-end user journey including:
+
+* Navigation flow
+* Form handling
+* File upload
+* Dynamic date & time selection
+* Popup handling
+* Email validation
 
 ---
 
-## 🚀 Features
-- End-to-end automation of booking flow  
-- Page Object Model (POM) implementation  
-- Scroll handling for hidden elements  
-- File upload automation  
-- Form filling and validation  
-- Dynamic date selection  
-- Time slot selection  
-- Popup handling  
-- Assertion of confirmation message  
+## 🚀 Key Features
+
+* ✅ End-to-end automation testing
+* ✅ Page Object Model (POM) architecture
+* ✅ Dynamic waits using WebDriverWait
+* ✅ JavaScript Executor handling
+* ✅ Scroll handling for hidden elements
+* ✅ File upload automation
+* ✅ Dynamic calendar date selection
+* ✅ Next month conditional handling
+* ✅ Time slot selection (Morning / Afternoon)
+* ✅ Popup handling & validation
+* ✅ Email assertion validation
+* ✅ Exception handling for unstable UI elements
 
 ---
 
 ## 🛠️ Tech Stack
-- Java  
-- Selenium WebDriver  
-- TestNG  
-- Maven  
-- ChromeDriver  
+
+* Java
+* Selenium WebDriver
+* TestNG
+* Maven
+* ChromeDriver
 
 ---
 
 ## 📂 Project Structure
+
+```bash
 src
  ├── main
  │    └── java
- │         ├── pages        # Page classes (POM)
- │         ├── base         # Base setup (WebDriver)
+ │         ├── pages        # Page Object classes
+ │         ├── base         # WebDriver setup
  │
  └── test
       └── java
            └── tests        # Test classes
-
+```
 
 ---
 
-## ✅ Test Scenario
-1. Open website  
-2. Navigate to Home Energy Assessment  
+## ✅ Automated Test Scenario
+
+### 🔹 Navigation Flow
+
+1. Open website
+2. Click:
+
+   * Our Services
+   * Home Energy Assessment
+   * Book your Home Energy Assessment
+
+### 🔹 Property Information
+
 3. Select:
-   - Semi-Detached  
-   - 2 Storeys  
-   - Yes / No options  
-4. Upload image  
-5. Click Next  
-6. Verify text  
-7. Fill form  
-8. Select Dublin address  
-9. Choose available date & time  
-10. Verify email  
+
+   * House Type = Semi-Detached
+   * No. of Storeys = 2
+   * Existing extension = Yes
+   * Plans to add extensions = No
+
+### 🔹 Upload Section
+
+4. Uncheck:
+
+   * "I don't have a photo to hand"
+5. Upload property image
+6. Click Next
+
+### 🔹 Validation
+
+7. Assert:
+
+   * "Your first step to a warm, comfortable, and healthy home"
+
+### 🔹 Form Handling
+
+8. Close popup if displayed
+
+9. Fill:
+
+   * First Name
+   * Last Name
+   * Email
+   * Mobile Number
+
+10. Type "Dublin" in property address field and select an address
+
+11. Click Next
+
+### 🔹 Schedule Logic
+
+12. Check available dates in current month
+13. If unavailable:
+
+* Move to next month
+* Select available date
+
+14. Select available time slot:
+
+* Morning
+* Afternoon
+* Then Click Next Button
+
+15. Click Later
+
+### 🔹 Final Assertion
+
+16. Assert previously entered email address from confirmation popup
 
 ---
 
-## ▶️ Run Project
-Prerequisites
-Java JDK 8+
-Maven installed
-Chrome browser
+## ⚡ Challenges Solved
 
-Steps
+During implementation, several real-world automation challenges were handled successfully:
+
+* Dynamic loading issues
+* Hidden elements
+* Scroll required elements
+* Duplicate locators
+* Delayed popup rendering
+* Click interception issues
+* Dynamic calendar handling
+* JavaScript click fallback
+* Explicit wait synchronization
+
+These improvements made the framework more stable and reliable.
+
+---
+
+## ▶️ How to Run the Project
+
+### 🔹 Prerequisites
+
+* Java JDK 8+
+* Maven
+* Google Chrome Browser
+
+### 🔹 Clone Repository
+
+```bash
 git clone https://github.com/AbdullahAlFahad9/Churchfield-Home-Services-Automation-Testing-Using-Selenium-Java-.git
+```
+
+### 🔹 Navigate to Project
+
+```bash
 cd Churchfield-Home-Services-Automation-Testing-Using-Selenium-Java-
+```
+
+### 🔹 Run Tests
+
+```bash
 mvn clean test
+```
+
+---
+
+## 📸 Test Automation Highlights
+
+* Dynamic Wait Handling
+* Robust Locator Strategy
+* POM Design Pattern
+* End-to-End Booking Flow
+* Stable UI Interaction
+* Assertion Validation
 
 ---
 
 ## 👨‍💻 Author
-Abdullah Al Fahad  
+
+### Abdullah Al Fahad
+
 Junior SQA Engineer
+
+🔗 GitHub:
+https://github.com/AbdullahAlFahad9

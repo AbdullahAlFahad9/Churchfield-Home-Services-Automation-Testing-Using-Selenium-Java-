@@ -115,6 +115,7 @@ public class SchedulePage {
                         ((JavascriptExecutor) driver)
                                         .executeScript("arguments[0].click();", slot);
                 }
+
         }
 
         public void clickNext() {

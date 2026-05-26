@@ -53,9 +53,12 @@ public class HomeEnergyTest extends BaseTest {
 
         String actualEmail = popup.getEmailFromPopup();
 
-        Assert.assertTrue(actualEmail.contains("test@mail.com"));
+        System.out.println(actualEmail);
+
+        Assert.assertEquals(actualEmail.trim(), "test@mail.com");
 
         popup.closePopup();
+
         tearDown();
     }
 }

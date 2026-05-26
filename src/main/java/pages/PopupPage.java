@@ -7,73 +7,71 @@ import java.time.Duration;
 
 public class PopupPage {
 
-    WebDriver driver;
-    WebDriverWait wait;
+        WebDriver driver;
+        WebDriverWait wait;
 
-    public PopupPage(WebDriver driver) {
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    }
+        public PopupPage(WebDriver driver) {
 
-    // popup container (open state)
-    By popup = By.xpath("//div[contains(@class,'app-modal') and contains(@class,'open')]");
-
-    // correct close button
-    By closeBtn = By.xpath(
-            "//div[contains(@class,'app-modal') and contains(@class,'open')]//button[contains(@class,'app-modal-close')]");
-
-    By laterBtn = By.xpath("//button[contains(text(),'Later')]");
-
-    By modal = By.cssSelector(".app-modal-body");
-    By emailText = By.xpath("//p[contains(text(),'quote to:')]//strong");
-    By closeBtn1 = By.cssSelector(".app-modal-close");
-
-    public void closePopupIfPresent() {
-
-        try {
-            // popup visible
-            wait.until(ExpectedConditions.visibilityOfElementLocated(popup));
-
-            // first try "Later" button
-            try {
-                driver.findElement(laterBtn).click();
-            } catch (Exception ignored) {
-            }
-
-            // then close icon
-            WebElement close = wait.until(ExpectedConditions.elementToBeClickable(closeBtn));
-            close.click();
-
-            // wait until popup gone
-            wait.until(ExpectedConditions.invisibilityOfElementLocated(popup));
-
-        } catch (Exception e) {
-            System.out.println("No popup found");
+                this.driver = driver;
+                this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         }
-    }
 
-    public String getEmailFromPopup() {
+        // email text
+        By emailText = By.xpath(
+                        "//div[contains(@class,'app-modal-body')]//strong[contains(text(),'@')]");
 
-        WebElement modalElement = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(modal));
+        // close button
+        By closeBtn = By.xpath(
+                        "//button[contains(@class,'app-modal-close')]");
 
-        WebElement email = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(emailText));
+        // get popup email
+        public String getEmailFromPopup() {
 
-        return email.getText().trim();
-    }
+                // popup fully load wait
+                wait.until(ExpectedConditions.presenceOfElementLocated(
+                                By.xpath("//div[contains(@class,'app-modal-body')]")));
 
-    public void closePopup() {
+                // email visible wait
+                WebElement email = wait.until(
+                                ExpectedConditions.visibilityOfElementLocated(emailText));
 
-        try {
-            WebElement btn = wait.until(
-                    ExpectedConditions.elementToBeClickable(closeBtn1));
-            btn.click();
-        } catch (Exception e) {
-            ((JavascriptExecutor) driver).executeScript(
-                    "arguments[0].click();",
-                    driver.findElement(closeBtn1));
+                // scroll
+                ((JavascriptExecutor) driver)
+                                .executeScript("arguments[0].scrollIntoView(true);", email);
+
+                String actualEmail = email.getText().trim();
+
+                System.out.println("Popup Email: " + actualEmail);
+
+                return actualEmail;
         }
-    }
 
+        // close popup
+        public void closePopup() {
+
+                try {
+
+                        // small wait
+                        Thread.sleep(2000);
+
+                        WebElement btn = driver.findElement(
+                                        By.cssSelector("button.app-modal-close"));
+
+                        // scroll
+                        ((JavascriptExecutor) driver)
+                                        .executeScript(
+                                                        "arguments[0].scrollIntoView({block:'center'});",
+                                                        btn);
+
+                        // direct JS click
+                        ((JavascriptExecutor) driver)
+                                        .executeScript("arguments[0].click();", btn);
+
+                        System.out.println("Popup Closed");
+
+                } catch (Exception e) {
+
+                        System.out.println("Popup close failed");
+                }
+        }
 }
