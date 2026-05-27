@@ -6,6 +6,11 @@ This project automates the complete **Home Energy Assessment Booking Flow** for 
 
 The framework is built using the **Page Object Model (POM)** design pattern to ensure scalability, maintainability, and reusable test components.
 
+## 🎥 Automation Demo
+
+https://github.com/user-attachments/assets/fcb1f396-9b70-44fb-aaaa-b2ec41b24480
+
+
 The automation covers the full end-to-end user journey including:
 
 * Navigation flow
