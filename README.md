@@ -182,6 +182,14 @@ mvn clean test
 
 ---
 
+## 🎥 Automation Demo Video
+
+Watch the full automation execution here:
+
+[![Watch the video](https://img.youtube.com/vi/NXOTZn16d-4/maxresdefault.jpg)](https://youtu.be/NXOTZn16d-4)
+
+🔗 Direct Link: https://youtu.be/NXOTZn16d-4
+
 ## 📸 Test Automation Highlights
 
 * Dynamic Wait Handling
